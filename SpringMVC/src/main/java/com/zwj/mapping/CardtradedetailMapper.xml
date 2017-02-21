@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"   
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zwj.dao.CardTradeDetailDao">
+	<select id="getCardTradeDetailById" parameterType="string" resultType="com.zwj.entity.CardTradeDetail">
+		SELECT * FROM yc_cardtradedetail WHERE yc_id=#{id}
+	</select>
+	<select id="getById"  resultType="com.zwj.entity.CardTradeDetail">
+		SELECT * FROM yc_cardtradedetail WHERE yc_id=#{0} and yc_errormessage=#{1}
+	</select>
+	<select id="getAll" resultType="com.zwj.entity.CardTradeDetail">
+		SELECT * FROM
+		yc_cardtradedetail
+	</select>
+	<select id="getAllCardTradeDetail" resultType="com.zwj.entity.CardTradeDetail">
+		SELECT * FROM
+		yc_cardtradedetail
+	</select>
+</mapper>
